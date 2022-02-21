@@ -1,21 +1,14 @@
 <?php
 
-$array_number = '';
-if (isset($_POST["width"]) && isset($_POST["height"])) {
-    $width = $_POST['width'];
-    $height = $_POST['height'];
-} else {
-    $width = 0;
-    $height = 0;
-}
+$width = 0;
+$height = 0;
 
 if (isset($_POST['height']) && isset($_POST['width'])) {
+    $width = $_POST['width'];
+    $height = $_POST['height'];
     if ($width == 1 && $height == 1) {
         echo "*";
     } else {
-        $width = $_POST['width'];
-        $height = $_POST['height'];
-
         for ($j = 0; $j < $width; $j++) {
             echo "* ";
         }
@@ -36,3 +29,4 @@ if (isset($_POST['height']) && isset($_POST['width'])) {
         }
     }
 }
+echo "<div><h2><a href='../index.php' class='tn btn-warning'>Back to home page</a></h2></div>";
