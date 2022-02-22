@@ -1,0 +1,28 @@
+@-webkit-keyframes my {
+    0% { color: #ed563b; }
+    50% { color: #fff;  }
+    100% { color: #ed563b;  }
+}
+@-moz-keyframes my {
+    0% { color: #ed563b;  }
+    50% { color: #fff;  }
+    100% { color: #ed563b;  }
+}
+@-o-keyframes my {
+    0% { color: #ed563b; }
+    50% { color: #fff; }
+    100% { color: #ed563b;  }
+}
+@keyframes my {
+    0% { color: #ed563b;  }
+    50% { color: #fff;  }
+    100% { color: #ed563b;  }
+}
+.flash-text {
+    font-size:24px;
+    font-weight:bold;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite;
+    -o-animation: my 700ms infinite;
+    animation: my 700ms infinite;
+}

@@ -13,6 +13,10 @@
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 
+    <link rel="stylesheet" type="text/css" href="css/flashing-text-effect.css">
+
+    <link rel="stylesheet" type="text/css" href="css/seesion-class.css">
+
     <link rel="stylesheet" type="text/css" href="css/button-form.css">
 
     <link rel="stylesheet" type="text/css" href="css/radio-form.css">
@@ -45,10 +49,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
                     <a href="index.php" class="logo">Training<em> Unlock NFQ</em></a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <li class="scroll-to-section"><a href="#top" class="active"></a></li>
                         <li class="scroll-to-section"><a href="#exercise1" class="active">Exercise 1</a></li>
@@ -59,7 +60,6 @@
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
-                    <!-- ***** Menu End ***** -->
                 </nav>
             </div>
         </div>
@@ -79,7 +79,7 @@
     </div>
 </section>
 <!-- ***** Features Item Start ***** -->
-<section class="section" id="exercise1">
+<section class="section-exercise" id="exercise1">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
@@ -101,7 +101,7 @@
                             <div class="col-md-1 col-sm-12">
                             </div>
                             <div class="col-md-5 col-sm-12">
-                                <pre id="exercise1-response"></pre>
+                                <span class="flash-text" id="exercise1-response">Result in here ...</span>
                             </div>
                         </div>
                     </form>
@@ -110,24 +110,8 @@
         </div>
     </div>
 </section>
-<!-- ***** Features Item End ***** -->
 
-<section class="section" id="exercise">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading">
-                    <div class="section-heading">
-                        <img src="image/line-dec.png" alt="waves">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ***** Our Classes Start ***** -->
-<section class="section" id="exercise2">
+<section class="section-exercise" id="exercise2">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
@@ -139,25 +123,37 @@
         </div>
         <div class="col-lg-12 col-md-12 col-xs-12">
             <form>
-                <div class="col-md-6 col-sm-12">
-                    <fieldset>
-                        <input name="myAnimal" id="myAnimal" type="radio" value="dog" class="radio-form" onchange="applyCookie()"> Dog
-                    </fieldset>
-                    <fieldset>
-                        <input name="myAnimal" id="myAnimal" type="radio" value="cat" class="radio-form" onchange="applyCookie()"> Cat
-                    </fieldset>
-                    <fieldset>
-                        <input name="myAnimal" id="myAnimal" type="radio" value="snack" class="radio-form" onchange="applyCookie()"> Snack
-                    </fieldset>
-                    <fieldset>
-                        <input name="myAnimal" id="myAnimal" type="radio" value="mouse" class="radio-form" onchange="applyCookie()"> Mouse
-                    </fieldset>
-                    <fieldset >
-                        <button type="button" id="form-submit button-form" class="main-button button-form" onclick="applyCookie()">Result</button>
-                    </fieldset>
-                </div>
-                <div class="col-md-5 col-sm-12">
-                    <pre id="exercise2-response"></pre>
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <fieldset>
+                            <input name="myAnimal" id="myAnimal" type="radio" value="cat" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'cat') {
+                                echo 'checked';
+                                                                                                                                     }?>> Cat
+                        </fieldset>
+                        <fieldset>
+                            <input name="myAnimal" id="myAnimal" type="radio" value="dog" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'dog') {
+                                echo 'checked';
+                                                                                                                                     }?>> Dog
+                        </fieldset>
+                        <fieldset>
+                            <input name="myAnimal" id="myAnimal" type="radio" value="snack" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'snack') {
+                                echo 'checked';
+                                                                                                                                       }?>> Snack
+                        </fieldset>
+                        <fieldset>
+                            <input name="myAnimal" id="myAnimal" type="radio" value="mouse" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'mouse') {
+                                echo 'checked';
+                                                                                                                                       }?>> Mouse
+                        </fieldset>
+                        <fieldset >
+                            <button type="button" id="form-submit button-form" class="main-button button-form" onclick="applyCookie()">Result</button>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-8 col-sm-12">
+                        The animal which you have at home: <span class="flash-text" id="exercise2-response">
+                            &nbsp&nbsp<?= ($_COOKIE['myAnimal'] ?? "NONE")?>
+                        </span>
+                    </div>
                 </div>
             </form>
         </div>
@@ -166,7 +162,7 @@
 
     </div>
 </section>
-<section class="section" id="exercise3">
+<section class="section-exercise" id="exercise3">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3">
@@ -193,10 +189,10 @@
                                 <button type="button" id="form-submit" class="main-button" onclick="draw()">Drawing</button>
                             </fieldset>
                         </div>
-                        <div class="col-md-2 col-sm-12">
+                        <div class="col-md-1 col-sm-12">
                         </div>
-                        <div class="col-md-4 col-sm-12">
-                            <pre id="exercise3-response"></pre>
+                        <div class="col-md-5 col-sm-12" id="exercise3-response">
+                            <span class="flash-text">Result in here ...</span>
                         </div>
                     </div>
                 </form>
@@ -225,7 +221,7 @@
 
 <!-- Bootstrap -->
 <script src="./js/popper.js"></script>
-<script src="./template-boostrap/assets/js/bootstrap.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
 
 <!-- Plugins -->
 <script src="./js/scrollreveal.min.js"></script>
@@ -240,12 +236,15 @@
 
 <script>
     function draw() {
+        let height = (document.getElementById("height").value != '') ? document.getElementById("height").value : 0;
+        let width = (document.getElementById("width").value != '') ? document.getElementById("width").value : 0;
+
         $.ajax({
             url: './php/DrawingRectangleStar.php',
             type: 'post',
             data: {
-                height: $('#height').val(),
-                width: $('#width').val()
+                height: height,
+                width: width
             },
             dataType: 'text',
             success: function (result) {
@@ -275,11 +274,9 @@
             data: {
                 myAnimal: $('input[name=myAnimal]:checked').val()
             },
-            dataType: 'text',
-            success: function (result) {
-                $('#exercise2-response').html(result);
-            }
+            dataType: 'text'
         });
+        location.reload();
     }
 </script>
 
