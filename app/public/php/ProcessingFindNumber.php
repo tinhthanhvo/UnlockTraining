@@ -8,20 +8,21 @@ include('function/FindNumberFunction.php');
 
 $numberStringArray = delNotNumChar($inputFormat);
 $numberArray = array_map("convertStrToInt", $numberStringArray);
+$response = '';
 if (count($numberArray) != 0) {
     $negativeNumberArray = findNegativeNumber($numberArray);
     $positiveNumberArray = findPositiveNumber($numberArray);
     $maximumNumber = findingMaximumNumber($negativeNumberArray, $positiveNumberArray);
     $minimumNumber = findingMinimumNumber($negativeNumberArray, $positiveNumberArray);
-    echo "The number input list: ";
-    printArray($numberArray);
-    echo "The negative number list: ";
-    printArray($negativeNumberArray);
-    echo "The positive number list: ";
-    printArray($positiveNumberArray);
-    echo "<br>The max number is: " . $maximumNumber;
-    echo "<br>The min number is: " . $minimumNumber;
+    $response = $response ."The number input list: ";
+    $response = $response .printArray($numberArray);
+    $response = $response ."The negative number list: ";
+    $response = $response .printArray($negativeNumberArray);
+    $response = $response ."The positive number list: ";
+    $response = $response .printArray($positiveNumberArray);
+    $response = $response ."<br>The max number is: " . $maximumNumber;
+    $response = $response ."<br>The min number is: " . $minimumNumber;
 } else {
-    echo "<h3 style='color: red'>The array input is null or noi number array.</h3>";
+    $response = $response ."The array input is null or not number array";
 }
-echo "<div><h2><a href='../index.php' class='tn btn-warning'>Back to home page</a></h2></div>";
+echo $response;

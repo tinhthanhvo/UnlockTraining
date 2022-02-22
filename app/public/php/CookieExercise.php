@@ -1,5 +1,6 @@
 <?php
 
+$myAnimalResponse = '';
 $myAnimalInput = '';
 if (isset($_POST['myAnimal'])) {
     $myAnimalInput = $_POST['myAnimal'];
@@ -7,19 +8,19 @@ if (isset($_POST['myAnimal'])) {
 
 include('function/CookieFunction.php');
 
-if (!isset($_COOKIE['my_animal'])) {
-    resetCookie("my_animal", $myAnimalInput, 3600);
+if (!isset($_COOKIE['myAnimal'])) {
+    resetCookie("myAnimal", $myAnimalInput, 3600);
     refreshPage();
 }
-if (!empty($myAnimalInput) && $_COOKIE['my_animal'] != $myAnimalInput) {
-    resetCookie("my_animal", $myAnimalInput, 3600);
+if (($myAnimalInput != '') && $_COOKIE['myAnimal'] != $myAnimalInput) {
+    resetCookie("myAnimal", $myAnimalInput, 3600);
     refreshPage();
 }
 
-echo "<h2>The animal which you have at home</h2><br>";
-if (isset($_COOKIE['my_animal'])) {
-    echo "<p>" . $_COOKIE['my_animal'] . "</p>";
+$myAnimalResponse = $myAnimalResponse . "<h6>The animal which you have at home</h6><br>";
+if (isset($_COOKIE['myAnimal'])) {
+    $myAnimalResponse = $myAnimalResponse ."<p>" . $_COOKIE['myAnimal'] . "</p>";
 } else {
-    echo "Set cookie is false.";
+    $myAnimalResponse = $myAnimalResponse . "Set cookie is false.";
 }
-echo "<div><h2><a href='../index.php' class='tn btn-warning'>Back to home page</a></h2></div>";
+echo $myAnimalResponse;

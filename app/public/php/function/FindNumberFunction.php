@@ -83,16 +83,17 @@ function findingMinimumNumber(array $negativeNumberArray = [], array $positiveNu
 
 /**
  * @param array<int> $array
- * @return void
+ * @return string
  */
-function printArray(array $array = []): void
+function printArray(array $array = []): string
 {
+    $resultString = '';
     if (count($array) == 0) {
-        echo "None";
+        $resultString = $resultString ."None";
     } else {
         foreach ($array as $item) {
-            echo $item . " ";
+            $resultString = $resultString .$item . "&nbsp&nbsp";
         }
     }
-    echo "<br>";
+    return $resultString ."<br>";
 }

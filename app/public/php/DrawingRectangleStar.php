@@ -6,27 +6,28 @@ $height = 0;
 if (isset($_POST['height']) && isset($_POST['width'])) {
     $width = $_POST['width'];
     $height = $_POST['height'];
+    $shape = '';
     if ($width == 1 && $height == 1) {
-        echo "*";
+        $shape = $shape ."*";
     } else {
         for ($j = 0; $j < $width; $j++) {
-            echo "* ";
+            $shape = $shape ."* ";
         }
-        echo "<br>";
+        $shape = $shape ."<br>";
 
         for ($i = 1; $i < $height - 1; $i++) {
-            echo "* ";
+            $shape = $shape ."* ";
             for ($j = 1; $j < $width - 1; $j++) {
-                echo "&nbsp&nbsp&nbsp";
+                $shape = $shape ."&nbsp&nbsp";
             }
-            echo "*<br>";
+            $shape = $shape ."*<br>";
         }
 
         if ($height > 1) {
             for ($j = 0; $j < $width; $j++) {
-                echo "* ";
+                $shape = $shape ."* ";
             }
         }
     }
+    echo $shape;
 }
-echo "<div><h2><a href='../index.php' class='tn btn-warning'>Back to home page</a></h2></div>";
