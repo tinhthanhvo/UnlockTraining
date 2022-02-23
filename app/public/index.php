@@ -29,7 +29,6 @@
 
 <body>
 
-<!-- ***** Preloader Start ***** -->
 <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
         <span class="dot"></span>
@@ -117,7 +116,7 @@
             <div class="col-lg-6 offset-lg-3">
                 <div class="section-heading">
                     <h2>Exercise 2 <em>Saving Cookie</em></h2>
-                    <p>Using cookie in order to select your favorite animal. <br>Select the animal at below, please?</p>
+                    <p>Using cookie in order to select your favorite animal. <br>Double the animal at below, please?</p>
                 </div>
             </div>
         </div>
@@ -126,24 +125,16 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-12">
                         <fieldset>
-                            <input name="myAnimal" id="myAnimal" type="radio" value="cat" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'cat') {
-                                echo 'checked';
-                                                                                                                                     }?>> Cat
+                            <input name="myAnimal" id="myAnimal" type="radio" value="cat" class="radio-form" onclick="applyCookie()"> Cat
                         </fieldset>
                         <fieldset>
-                            <input name="myAnimal" id="myAnimal" type="radio" value="dog" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'dog') {
-                                echo 'checked';
-                                                                                                                                     }?>> Dog
+                            <input name="myAnimal" id="myAnimal" type="radio" value="dog" class="radio-form" onclick="applyCookie()"> Dog
                         </fieldset>
                         <fieldset>
-                            <input name="myAnimal" id="myAnimal" type="radio" value="snack" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'snack') {
-                                echo 'checked';
-                                                                                                                                       }?>> Snack
+                            <input name="myAnimal" id="myAnimal" type="radio" value="snack" class="radio-form" onclick="applyCookie()"> Snack
                         </fieldset>
                         <fieldset>
-                            <input name="myAnimal" id="myAnimal" type="radio" value="mouse" class="radio-form" onclick="applyCookie()" <?php if ($_COOKIE['myAnimal'] == 'mouse') {
-                                echo 'checked';
-                                                                                                                                       }?>> Mouse
+                            <input name="myAnimal" id="myAnimal" type="radio" value="mouse" class="radio-form" onclick="applyCookie()"> Mouse
                         </fieldset>
                         <fieldset >
                             <button type="button" id="form-submit button-form" class="main-button button-form" onclick="applyCookie()">Result</button>
