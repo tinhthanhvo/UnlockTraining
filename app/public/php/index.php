@@ -100,10 +100,10 @@ if(isset($_POST['animal'])){
 
     <div style="margin-top: 10px">
         <h2>
-            <a href="./cookie_exercise.php"><?php isset($_COOKIE['animal']) ? print "Change option" : print "Chose the animal, you love."?></a>
+            <a href="cookie_exercise.php"><?php isset($_COOKIE['animal']) ? print "Change option" : print "Chose the animal, you love."?></a>
         </h2>
         <h2>
-            <a href="./drawing_rectangle_star.php">Exercise 3</a>
+            <a href="drawing_rectangle_star.php">Exercise 3</a>
         </h2>
     </div>
 
