@@ -12,6 +12,8 @@ services:
     image: php:fpm
     volumes:
       - ./app:/app
+    build:
+      dockerfile: Dockerfile
     links:
       - db
   db:
