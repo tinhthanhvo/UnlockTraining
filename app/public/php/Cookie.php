@@ -8,4 +8,4 @@ if($myFavoriteImageInput != '') {
 }
 
 $myFavoriteImageCookie = (isset($_COOKIE['myFavoriteImage'])) ? $_COOKIE['myFavoriteImage'] : '';
-header("Location: /app/public/?pageName=cookie");
+header("Location: /?pageName=cookie");
