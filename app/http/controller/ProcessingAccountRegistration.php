@@ -7,8 +7,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $password = $_POST['password'];
     $retypePassword = $_POST['retypePassword'];
 
-    include ("./inputValidation.php");
-    include ("../database/connectDB.php");
+    include("./inputValidation.php");
+    include("../database/connectDB.php");
 
     $connection = connectDB();
 
