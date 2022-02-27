@@ -9,9 +9,9 @@ switch ($pageName) {
         include './html/drawing-rectangle-shape.html';
         break;
     case 'cookie':
-        include './html/cookie-exercise.html';
+        include './html/cookie-exercise.php';
         break;
     default:
-        include './html/error-page.html';
+        include './php/Profile.php';
         break;
 }

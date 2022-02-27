@@ -23,7 +23,7 @@
                         <div class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/app/public/template/assets/img/slides-1.jpg" class="d-block w-100" alt="...">
+                                    <img src="./template/assets/img/slides-1.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -40,7 +40,7 @@
                         <div class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/app/public/template/assets/img/slides-2.jpg" class="d-block w-100" alt="...">
+                                    <img src="./template/assets/img/slides-2.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                         <div class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/app/public/template/assets/img/slides-3.jpg" class="d-block w-100" alt="...">
+                                    <img src="./template/assets/img/slides-3.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                         <div class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/app/public/template/assets/img/slides-1.jpg" class="d-block w-100" alt="...">
+                                    <img src="./template/assets/img/slides-1.jpg" class="d-block w-100" alt="...">
                                 </div>
                             </div>
                         </div>
