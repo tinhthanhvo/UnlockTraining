@@ -1,27 +1,27 @@
 <?php
-    session_start();
-    if(!isset($_SESSION['login'])){
-        header("Location: /html/login-form.php");
-    }
-?>
+//    session_start();
+//    if(!isset($_SESSION['login'])){
+//        header("Location: /view/login-form.php");
+//    }
+//?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('./layout/head.php'); ?>
+<?php include('./view/layout/head.php'); ?>
 
 <body>
 <?php
-    include('./layout/header.php');
-    include('./layout/sidebar.php')
+    include('./view/layout/header.php');
+include('./view/layout/sidebar.php')
 ?>
 <main id="main" class="main">
 
-    <?php include ('./php/RoutingPage.php')?>
+    <?php include('../resource/route/RoutingPage.php') ?>
 
 </main>
 
-<?php include ('./layout/footer.php')?>
+<?php include('./view/layout/footer.php') ?>
 
 </body>
 
