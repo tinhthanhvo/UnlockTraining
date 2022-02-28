@@ -57,13 +57,13 @@
                                 </div>
 
                                 <?php
-                                    if(isset($_SESSION['errors'])){
-                                        echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>";
-                                            foreach ($_SESSION['errors'] as $error){
-                                                echo $error."<br>";
-                                            }
-                                        echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+                                if (isset($_SESSION['errors'])) {
+                                    echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>";
+                                    foreach ($_SESSION['errors'] as $error) {
+                                        echo $error . "<br>";
                                     }
+                                        echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
+                                }
                                 ?>
 
                                 <form class="row g-3 needs-validation" method="POST" action="../../http/controller/ProcessingAccountRegistration.php" novalidate>

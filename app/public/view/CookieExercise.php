@@ -16,7 +16,7 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             <input class="form-check-input" type="radio" name="myFavoriteImage" value="img1"
-                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage']=="img1") ? 'checked' : ''; ?>
+                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage'] == "img1") ? 'checked' : ''; ?>
                             >
                         </h5>
 
@@ -34,7 +34,7 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             <input class="form-check-input" type="radio" name="myFavoriteImage" value="img2"
-                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage']=="img2") ? 'checked' : ''; ?>
+                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage'] == "img2") ? 'checked' : ''; ?>
                             >
                         </h5>
                         <div class="carousel slide" data-bs-ride="carousel">
@@ -54,7 +54,7 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             <input class="form-check-input" type="radio" name="myFavoriteImage" value="img3"
-                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage']=="img3") ? 'checked' : ''; ?>
+                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage'] == "img3") ? 'checked' : ''; ?>
                             >
                         </h5>
                         <div class="carousel slide" data-bs-ride="carousel">
@@ -71,7 +71,7 @@
                     <div class="card-body">
                         <h5 class="card-title">
                             <input class="form-check-input" type="radio" name="myFavoriteImage" value="img4"
-                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage']=="img4") ? 'checked' : ''; ?>
+                                <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage'] == "img4") ? 'checked' : ''; ?>
                             >
                         </h5>
 

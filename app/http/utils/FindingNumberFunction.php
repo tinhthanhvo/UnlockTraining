@@ -35,10 +35,10 @@ function printArray(array $array = []): string
 {
     $resultString = '';
     if (count($array) == 0) {
-        $resultString = $resultString ."None";
+        $resultString = $resultString . "None";
     } else {
         foreach ($array as $item) {
-            $resultString = $resultString .$item . "&nbsp&nbsp";
+            $resultString = $resultString . $item . "&nbsp&nbsp";
         }
     }
     return $resultString;

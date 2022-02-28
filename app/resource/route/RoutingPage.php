@@ -15,6 +15,7 @@ switch ($pageName) {
         include '../http/controller/Cookie.php';
         break;
     default:
-        include '../http/controller/Profile.php';
+        include './view/UserList.php';
+        include '../http/controller/GetUserList.php';
         break;
 }
