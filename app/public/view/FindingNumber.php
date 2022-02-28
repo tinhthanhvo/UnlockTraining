@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Input Number Array Form</h5>
 
-                    <form class="row g-3" method="post" action="../../http/controller/FindingNumber.php">
+                    <form class="row g-3" method="post" action="/?pageName=finding-number">
                         <div class="col-12">
                             <label for="numberArray" class="form-label">Input Number Array</label>
                             <input type="text" class="form-control" id="numberArray" name="numberArray" placeholder="Input number array here...">

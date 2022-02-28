@@ -45,17 +45,13 @@
                                 <img src="../template/assets/img/logo.png" alt="">
                                 <span class="d-none d-lg-block">NiceAdmin</span>
                             </a>
-                        </div><!-- End Logo -->
-
+                        </div>
                         <div class="card mb-3">
-
                             <div class="card-body">
-
                                 <div class="pt-4 pb-2">
                                     <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
                                     <p class="text-center small">Enter your personal details to create account</p>
                                 </div>
-
                                 <?php
                                 if (isset($_SESSION['errors'])) {
                                     echo "<div class='alert alert-danger alert-dismissible fade show' role='alert'>";
@@ -65,7 +61,6 @@
                                         echo "<button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button></div>";
                                 }
                                 ?>
-
                                 <form class="row g-3 needs-validation" method="POST" action="../../http/controller/ProcessingAccountRegistration.php" novalidate>
                                     <div class="col-12">
                                         <label for="yourName" class="form-label">Your Name</label>
@@ -107,11 +102,9 @@
 
                             </div>
                         </div>
-
                         <div class="credits">
                             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -119,11 +112,9 @@
         </section>
 
     </div>
-</main><!-- End #main -->
-
+</main>
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
 <script src="../template/assets/vendor/apexcharts/apexcharts.min.js"></script>
 <script src="../template/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../template/assets/vendor/chart.js/chart.min.js"></script>

@@ -1,9 +1,11 @@
 <?php
-//    session_start();
-//    if(!isset($_SESSION['login'])){
-//        header("Location: /view/login-form.php");
-//    }
-//?>
+include_once '../http/controller/Cookie.php';
+    session_start();
+    if(!isset($_SESSION['login'])){
+        header("Location: /view/LoginForm.php");
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +15,7 @@
 <body>
 <?php
     include('./view/layout/Header.php');
-include('./view/layout/Sidebar.php')
+    include('./view/layout/Sidebar.php')
 ?>
 <main id="main" class="main">
 

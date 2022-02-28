@@ -17,7 +17,7 @@
 
             <li class="nav-item dropdown pe-3">
 
-                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="../../../http/controller/ProcessingLogout.php">
+                <a class="nav-link nav-profile d-flex align-items-center pe-0" href="./view/Logout.php">
                     <span class="d-none d-md-block ps-2">Logout</span>
                 </a><!-- End Profile Iamge Icon -->
 

@@ -1,8 +1,6 @@
 <?php
 
-include("../../model/database/connectDB.php");
-
-$connection = connectDB();
+include("../model/database/connectDB.php");
 
 function getUserList()
 {
@@ -11,7 +9,7 @@ function getUserList()
     $getUserListString = "SELECT * FROM users;";
     $users = $connection->query($getUserListString);
     if (mysqli_num_rows($users) > 0) {
-        $rows = mysqli_fetch_assoc($users);
+        return $users;
     }
     return $rows;
 }

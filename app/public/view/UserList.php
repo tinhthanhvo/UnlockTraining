@@ -19,8 +19,7 @@
             ?>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Tables without borders</h5>
-                    <p>Add <code>.table-borderless</code> for a table without borders.</p>
+                    <h5 class="card-title">User List</h5>
                     <!-- Active Table -->
                     <table class="table table-borderless">
                         <thead>
@@ -33,21 +32,21 @@
                         </thead>
                         <tbody>
                         <?php
-                            include('../../http/utils/GetUserList.php');
+                            include('../http/utils/GetUserList.php');
                             $users = getUserList();
-                        foreach ($users as $i => $user) {
-                            echo "<tr>
-                                        <th scope='row'>" . $i . "</th>
-                                        <td>" . $user['fullName'] . "</td>
-                                        <td>" . $user['username'] . "</td>
-                                        <td>" . $user['email'] . "</td>
-                                    </tr>";
-                        }
+                            $i = 1;
+                            while ($row = mysqli_fetch_assoc($users)) {
+                                echo "<tr>
+                                    <td>$i</td>
+                                    <td>" . $row['name'] . "</td>
+                                    <td>" . $row['username'] . "</td>
+                                    <td>" . $row['email'] . "</td>
+                                </tr>";
+                                $i++;
+                            }
                         ?>
                         </tbody>
                     </table>
-                    <!-- End Tables without borders -->
-
                 </div>
             </div>
 

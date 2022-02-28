@@ -8,7 +8,7 @@
     </nav>
 </div>
 <section class="section">
-    <form method="post" action="../../http/controller/Cookie.php">
+    <form method="post" action="/?pageName=cookie">
         <div class="row">
             <div class="col-lg-6">
 
@@ -19,7 +19,6 @@
                                 <?= (isset($_COOKIE['myFavoriteImage']) && $_COOKIE['myFavoriteImage'] == "img1") ? 'checked' : ''; ?>
                             >
                         </h5>
-
                         <div class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
