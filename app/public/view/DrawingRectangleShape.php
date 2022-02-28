@@ -15,7 +15,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Input Parameter of Shape Form</h5>
 
-                    <form class="row g-3" method="post" action="./php/DrawingShape.php">
+                    <form class="row g-3" method="post" action="../../http/controller/DrawingShape.php">
                         <div class="col-12">
                             <label for="width" class="form-label">Width</label>
                             <input type="number" class="form-control" id="width" name="width">

@@ -8,12 +8,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('./view/layout/head.php'); ?>
+<?php include('./view/layout/Head.php'); ?>
 
 <body>
 <?php
-    include('./view/layout/header.php');
-include('./view/layout/sidebar.php')
+    include('./view/layout/Header.php');
+include('./view/layout/Sidebar.php')
 ?>
 <main id="main" class="main">
 
@@ -21,7 +21,7 @@ include('./view/layout/sidebar.php')
 
 </main>
 
-<?php include('./view/layout/footer.php') ?>
+<?php include('./view/layout/Footer.php') ?>
 
 </body>
 

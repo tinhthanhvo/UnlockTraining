@@ -8,11 +8,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $retypePassword = $_POST['retypePassword'];
 
     include("./inputValidation.php");
-    include("../database/connectDB.php");
+    include("../../model/database/connectDB.php");
 
     $connection = connectDB();
 
-    if(validateEmail($email) && isEqualPassAndRePass($password, $retypePassword));
     if(!isEqualPassAndRePass($password, $retypePassword)){
         echo "Password is not match.";
     }

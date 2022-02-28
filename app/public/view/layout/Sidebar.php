@@ -29,20 +29,6 @@
                 <span>Drawing shape</span>
             </a>
         </li>
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="/view/register-form.php">
-                <i class="bi bi-box-arrow-in-right"></i>
-                <span>Account</span>
-            </a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link collapsed" href="/view/login-form.php">
-                <i class="bi bi-box-arrow-in-right"></i>
-                <span>Login</span>
-            </a>
-        </li>
     </ul>
 
 </aside>
