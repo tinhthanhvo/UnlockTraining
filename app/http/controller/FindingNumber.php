@@ -1,10 +1,10 @@
 <?php
 
+include ('../utils/FindingNumberFunction.php');
+
 $formInput = $_POST['numberArray'];
 $inputFormat = str_replace(",", " ", $formInput);
 $inputFormat = explode(" ", $inputFormat);
-
-include('../utils/FindingNumberFunction.php');
 
 $numberStringArray = array_filter($inputFormat, "is_numeric");
 $numberArray = array_map("convertStrToInt", $numberStringArray);

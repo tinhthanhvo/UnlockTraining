@@ -6,7 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $encodedPassword = md5($password);
 
     include("./inputValidation.php");
-    include("../database/connectDB.php");
+    include("../../model/database/connectDB.php");
 
     $connection = connectDB();
 

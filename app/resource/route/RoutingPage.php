@@ -3,13 +3,16 @@
     $pageName = (isset($_GET['pageName'])) ? $_GET['pageName'] : '';
 switch ($pageName) {
     case 'finding-number':
-        include './view/finding-number.html';
+        include './view/FindingNumber.php';
+        include '../http/controller/FindingNumber.php';
         break;
     case 'drawing-shape':
-        include './view/drawing-rectangle-shape.html';
+        include './view/DrawingRectangleShape.php';
+        include '../http/controller/DrawingShape.php';
         break;
     case 'cookie':
-        include './view/cookie-exercise.php';
+        include './view/CookieExercise.php';
+        include '../http/controller/Cookie.php';
         break;
     default:
         include '../http/controller/Profile.php';

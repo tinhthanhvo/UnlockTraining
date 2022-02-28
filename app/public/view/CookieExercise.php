@@ -8,7 +8,7 @@
     </nav>
 </div>
 <section class="section">
-    <form method="post" action="./php/Cookie.php">
+    <form method="post" action="../../http/controller/Cookie.php">
         <div class="row">
             <div class="col-lg-6">
 
